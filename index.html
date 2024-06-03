@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <title>Calculator</title>
+
+</head>
+<body>
+    <div id="calculator">
+        <!-- calculator display -->
+        <div class="row" id="display">
+            <p>
+                
+            </p>
+        </div>
+        <div class="row">
+            <button class="blue" type="button" onclick="updateDisplay(this.textContent)">AC</button>
+            <button class="blue" type="button" onclick="updateDisplay(this.textContent)">+/-</button>
+            <button class="blue" type="button" onclick="updateDisplay(this.textContent)">%</button>
+            <button class="orange" type="button" onclick="updateDisplay(this.textContent)">/</button>
+        </div>
+        <div class="row">
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">7</button>
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">8</button>
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">9</button>
+            <button class="orange" type="button" onclick="updateDisplay(this.textContent)">*</button>            
+        </div>
+        <div class="row">
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">4</button>
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">5</button>
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">6</button>
+            <button class="orange" type="button" onclick="updateDisplay(this.textContent)">-</button>            
+        </div>
+        <div class="row">
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">1</button>
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">2</button>
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">3</button>
+            <button class="orange" type="button" onclick="updateDisplay(this.textContent)">+</button>            
+        </div>
+        <div class="row">
+            <button class="green" id="doubleWide" type="button" onclick="updateDisplay(this.textContent)">0</button>
+            <button class="green" type="button" onclick="updateDisplay(this.textContent)">.</button>
+            <button class="orange" type="button" onclick="updateDisplay(this.textContent)">=</button>          
+        </div>
+
+    </div>
+
+    <script src="./js/js.js"></script>
+</body>
+</html>
