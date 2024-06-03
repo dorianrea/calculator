@@ -69,39 +69,33 @@ function updateDisplay(e){
         case "-":
         case "*":
         case "/":
-            if(result !== undefined){
-                console.log("YIPE");
-                
-                break;
-            }
-            if(operator === undefined){
-                operator = e;
-                firstNumber = displayValue.textContent;
-                console.log("operator is:" + operator);
-            }else if(operator !== undefined){
-                // console.log(firstNumber, result);
-                // if(result !== undefined)
-                firstNumber = result;
-                // console.log(firstNumber, result);
-                // firstNumber = displayValue.textContent;
-                console.log("Stringing the math");
+            if(operator !== undefined){
+                if(result !== undefined)firstNumber = result;
                 secondNumber = displayValue.textContent;
+                console.log("Doing math" + secondNumber);
                 operate(firstNumber, secondNumber, operator);
                 operator = e;
+                break;
             }
+            firstNumber = displayArray.join('');
+            operator = e;
+            console.log(firstNumber, operator, secondNumber, result);
             break; 
         case "=":
             if(result !== undefined)firstNumber = result;
             secondNumber = displayValue.textContent;
             console.log("Doing math" + secondNumber);
             operate(firstNumber, secondNumber, operator);
+            operator = undefined;
             break;
         case "AC":
+            console.log("Clearing Memory");
             firstNumber = secondNumber = operator = result = undefined;
             displayArray = [];
             displayValue.textContent = displayArray.join('');
             break;                                        
         default:
+            console.log(e);
             displayArray.push(e);
             displayValue.textContent = displayArray.join('');
             break;
